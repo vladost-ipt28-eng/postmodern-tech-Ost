@@ -1,0 +1,3 @@
+image:
+  repository: ghcr.io/vladost-ipt28-eng/postmodern-tech-ost
+  tag: "latest"
