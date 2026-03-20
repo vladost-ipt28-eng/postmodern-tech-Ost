@@ -27,7 +27,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          # ТУТ ВИПРАВЛЕНО НА МАЛЕНЬКІ ЛІТЕРИ
+          tags: ghcr.io/vladost-ipt28-eng/postmodern-tech-ost:latest
 
   test-docker:
     needs: build-and-push
@@ -44,7 +45,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull Docker image
-        run: docker pull ghcr.io/${{ github.repository }}:latest
+        # ТУТ ТЕЖ ВИПРАВЛЕНО
+        run: docker pull ghcr.io/vladost-ipt28-eng/postmodern-tech-ost:latest
 
       - name: Run tests inside container
-        run: docker run --rm ghcr.io/${{ github.repository }}:latest
+        # І ТУТ
+        run: docker run --rm ghcr.io/vladost-ipt28-eng/postmodern-tech-ost:latest
